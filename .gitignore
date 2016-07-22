@@ -1,0 +1,4 @@
+.idea/*
+.git/*
+backups/*.zip
+restores/*.zip
