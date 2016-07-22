@@ -3,12 +3,14 @@
 Taking backup of a huge site and database to amazon s3 bucket by manually or setting cron job to perform regular backups. View the **`docs/screenshots`** for steps of process.
 
 ##### How to?
+
 + Installation & Configuration
 + Taking backup only once.
 + Setting cron for Automated Backups
 + Restoration Process
 
 **Installation & Configuration:**
+
 1. Upload files to directory outside to the actual backup folder and make sure it is not publicly accessible.
 2. Create config file inside “config” folder. Follow & copy example ini file.
 
@@ -18,6 +20,7 @@ Just run the command  in terminal/ ssh. Follow the instructions show in the term
     php PATH_TO_SCRIPT/backup-cron.php start:true config:example
 
 **Setting cron for Automated Backups:**
+
 1. Make sure to have active config file inside config folder.
 2. Add cron command `Eg. “php PATH_TO_SCRIPT/backup-cron.php start:true config:example”`
 3. Only one backup process will be done at a time, hence a lock file is created. Lock file will be removed after performing backup process. If script is manually terminated or thread terminated abnormally then make sure that in “backupProcess.lock” file doesn’t exist in script folder. If exist remove it to retry the operation again.
@@ -25,6 +28,7 @@ Just run the command  in terminal/ ssh. Follow the instructions show in the term
 5. Check log file in logs if it requires some information about how process done.
 
 **Restoration Process:**
+
 1. Make sure to have active config file inside config folder.
 2. Run command from console
 `Eg. “php PATH_TO_SCRIPT/restoreConsole.php start:true config:example”`
