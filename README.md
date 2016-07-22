@@ -37,6 +37,13 @@ Just run the command  in terminal/ ssh. Follow the instructions show in the term
 4. If config has defined values to `RESTORATION_CONFIG` then it will be selected and shown by default. Else configs will be asked in the terminal.
 5. Check log file in logs if it required.
 
+**Requirements:**
+
+It requires the following shell commands to be executable in the environment `php, zip, unzip, mysqldump`
+
+**Todo:**
+1. Setting auto delete of files in s3 bucket after preferred days.
+
 **Screen Shots:**
 
 ![Config](https://raw.githubusercontent.com/vijaynaidu/Site-Backup-Restore-AmazonS3/master/docs/screenshots/1.png)
